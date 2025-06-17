@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Details Form</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #00c9ff, #92fe9d);
+            min-height: 100vh;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+        }
+
+        .form-container {
+            background: #ffffff;
+            padding: 2rem 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 420px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .form-container:hover {
+            transform: scale(1.02);
+        }
+
+        .form-container h2 {
+            color: #2c3e50;
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+        }
+
+        .form-group {
+            text-align: left;
+            margin-bottom: 1.2rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: #34495e;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 0.75rem;
+            border-radius: 10px;
+            border: 1px solid #ccc;
+            outline: none;
+            transition: border 0.3s, box-shadow 0.3s;
+            font-size: 1rem;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus {
+            border-color: #00b894;
+            box-shadow: 0 0 5px rgba(0, 184, 148, 0.4);
+        }
+
+        .submit-btn {
+            background: linear-gradient(to right, #00b894, #00cec9);
+            color: #fff;
+            padding: 0.85rem 1.8rem;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: background 0.3s, transform 0.2s;
+        }
+
+        .submit-btn:hover {
+            background: linear-gradient(to right, #00cec9, #00b894);
+            transform: scale(1.03);
+        }
+
+        .result {
+            margin-top: 1.5rem;
+            color: #2d3436;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="form-container">
+        <h2>Student Details</h2>
+        <form id="studentForm">
+            <div class="form-group">
+                <label for="name">Student Name:</label>
+                <input type="text" id="name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="rollNo">Roll No:</label>
+                <input type="number" id="rollNo" required>
+            </div>
+
+            <div class="form-group">
+                <label for="city">City:</label>
+                <select id="city" required>
+                    <option value="">--Select City--</option>
+                    <option value="Mumbai">Navsari</option>
+                    <option value="Delhi">Surat</option>
+                    <option value="Bangalore">Baroda</option>
+                    <option value="Kolkata">Bardoli</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="course">Course:</label>
+                <input type="text" id="course" required>
+            </div>
+
+            <button type="submit" class="submit-btn">Submit</button>
+        </form>
+    </div>
+    <script src="std.js"></script>
+</body>
+
+</html>
